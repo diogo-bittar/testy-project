@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================
+    RESET
+========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.titulo-destaque {
+  color: var(--cor-primaria);
+}
+
+/* ==========================
+    VARIÁVEIS ROOT
+========================== */
+:root {
+  --cor-fundo-inicio: #0a1a1f;
+  --cor-fundo-fim: #000000;
+  --cor-primaria: #00bcd4;
+  --cor-primaria-hover: #00a5bb;
+  --cor-texto: #f5f5f5;
+  --cor-texto-suave: #a0aeb2;
+  --cor-erro: #ff5c5c;
+  --cor-vidro-fundo: rgba(255, 255, 255, 0.06);
+  --cor-vidro-borda: rgba(255, 255, 255, 0.12);
+  --cor-campo-fundo: rgba(255, 255, 255, 0.04);
+  --cor-campo-borda: rgba(255, 255, 255, 0.14);
+
+  --fonte-p: 0.875rem;
+  --fonte-m: 1rem;
+  --fonte-gg: 1.75rem;
+
+  --espaco-pp: 0.5rem;
+  --espaco-p: 1rem;
+  --espaco-m: 1.5rem;
+  --espaco-g: 2.5rem;
+
+  --raio-cartao: 16px;
+  --raio-campo: 8px;
+  --largura-max-cartao: 400px;
+  --desfoque-vidro: 16px;
+  --transicao-rapida: 0.2s ease;
+}
+
+/* ==========================
+    FUNDO
+========================== */
+.fundo {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espaco-m);
+}
+
+/* ==========================
+    CARTÃO
+========================== */
+.cartao {
+  width: 100%;
+  max-width: var(--largura-max-cartao);
+  background: var(--cor-vidro-fundo);
+  border: 1px solid var(--cor-vidro-borda);
+  backdrop-filter: blur(var(--desfoque-vidro));
+  -webkit-backdrop-filter: blur(var(--desfoque-vidro));
+  border-radius: var(--raio-cartao);
+  padding: var(--espaco-g) var(--espaco-m);
+  color: var(--cor-texto);
+}
+
+.cartao-topo {
+  text-align: center;
+  margin-bottom: var(--espaco-g);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--espaco-p);
+  object-fit: contain;
+}
+
+.titulo {
+  font-size: var(--fonte-gg);
+  font-weight: 600;
+  margin-bottom: var(--espaco-pp);
+}
+
+.subtitulo {
+  font-size: var(--fonte-p);
+  color: var(--cor-texto-suave);
+}
+
+/* ==========================
+    FORMULÁRIO
+========================== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-m);
+}
+
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-pp);
+}
+
+.rotulo {
+  font-size: var(--fonte-p);
+  font-weight: 500;
+  color: var(--cor-texto-suave);
+}
+
+.campo-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--cor-campo-fundo);
+  border: 1px solid var(--cor-campo-borda);
+  border-radius: var(--raio-campo);
+  transition: border-color var(--transicao-rapida);
+}
+
+.campo-box:focus-within {
+  border-color: var(--cor-primaria);
+}
+
+/* Ícones SVG do formulário */
+.icone {
+  position: absolute;
+  left: var(--espaco-p);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--cor-texto-suave);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.campo {
+  flex: 1;
+  min-width: 0;
+  color: var(--cor-texto);
+  padding: 0.75rem 3rem 0.75rem 2.75rem;
+  font-size: var(--fonte-m);
+}
+
+.campo::placeholder {
+  color: var(--cor-texto-suave);
+  opacity: 0.6;
+}
+
+.ver-senha {
+  position: absolute;
+  right: var(--espaco-p);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  color: var(--cor-texto-suave);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.ver-senha:hover,
+.ver-senha:focus-visible {
+  color: var(--cor-texto);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ver-senha.visivel {
+  color: var(--cor-primaria);
+}
+
+.ver-senha::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ver-senha.visivel::after {
+  opacity: 1;
+}
+
+.ver-senha svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.erro {
+  font-size: var(--fonte-p);
+  color: var(--cor-erro);
+  min-height: 1em;
+}
+
+/* ==========================
+    BOTÃO
+========================== */
+.botao {
+  width: 100%;
+  padding: 0.85rem var(--espaco-p);
+  border-radius: var(--raio-campo);
+  font-weight: 600;
+  font-size: var(--fonte-m);
+  transition: background var(--transicao-rapida), transform var(--transicao-rapida);
+}
+
+.botao-principal {
+  background: var(--cor-primaria);
+  color: #04191c;
+}
+
+.botao-principal:hover {
+  background: var(--cor-primaria-hover);
+}
+
+.botao-principal:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --largura-max-cartao: 90%;
+    --espaco-g: 1.5rem;
+    --fonte-gg: 1.5rem;
+  }
+}
