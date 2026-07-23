@@ -17,7 +17,7 @@ Interface de autenticação corporativa moderna e responsiva desenvolvida para t
 *   **JavaScript (ES6+)** — Manipulação limpa do DOM e manipulação de eventos.
 *   **Devicon** — Pacote de ícones utilizado para a padronização visual da interface de tecnologia.
 *   **Inter Font** — Tipografia limpa via Google Fonts para alta legibilidade.
-*    **Claude / Gemini ** — Manipulação de IA para estrutura e design.
+*   **Claude / Gemini** — Manipulação de IA para estrutura e design.
 
 ---
 
