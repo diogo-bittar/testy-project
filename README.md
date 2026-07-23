@@ -3,14 +3,14 @@
 Interface de autenticação corporativa moderna e responsiva desenvolvida para treinar meus conhecimentos. 
 ---
 
-## ⚙️ Funcionalidades Em Destaque
+##  Funcionalidades Em Destaque
 
 *   **Acessibilidade (a11y):** Uso de atributos estruturais `aria-label`, `aria-required`, `aria-live` e `aria-controls` para leitores de tela.
 *   **Validação Interna:** Validação nativa de campos obrigatórios e estrutura de e-mail antes do envio do formulário.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 *   **HTML** — Estrutura semântica e acessível.
 *   **CSS** — Custom Properties (variáveis), Flexbox e posicionamento absoluto.
@@ -38,10 +38,10 @@ Interface de autenticação corporativa moderna e responsiva desenvolvida para t
 
 1. Clone o repositório para a sua máquina:
    ```
-   git clone [https://github.com/SEU-USUARIO/TESTY-Access.git](https://github.com/SEU-USUARIO/TESTY-Access.git)
+   git clone https://github.com/diogo-bittar/testy-project.git
    ```
 ##  Acesse a pasta do projeto
 ---
-cd TESTY-Access
+cd testy-project
 ---
 Abra o arquivo index.html diretamente em seu navegador ou utilize a extensão Live Server no VS Code para rodar o servidor local.
